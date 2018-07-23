@@ -3,7 +3,7 @@
   <Main>
     <slot></slot>
   </Main>
-  <div class="Grid-rightSpacer Flex--grow "></div>
+  <!-- <div class="Grid-rightSpacer Flex--grow "></div> -->
 </main>
 
 <script>

@@ -31,9 +31,8 @@
   }
 
   &-logo {
-    padding-bottom: 20px;
     top: var(--logo-container-top);
-    right: var(--logo-container-right);
+    left: var(--logo-container-left);
 
     & a {
       background-position: center center;
@@ -46,7 +45,7 @@
         color: rgba(46, 56, 47, 0.5);
         position: absolute;
         bottom: -15px;
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 600;
         line-height: 1.5;
         left: 0;
@@ -128,14 +127,14 @@
       }
 
       & a:hover {
-        font-weight: 500;
+        color: var(--primary);
       }
 
       a {
         position: relative;
         display: block;
         font-size: 14px;
-        color: #4c555a;
+        color: #36463a;
         min-height: 28px;
         line-height: 20px;
         padding: 4px 0;
