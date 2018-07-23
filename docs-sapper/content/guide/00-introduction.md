@@ -1,44 +1,88 @@
 ---
-title: Introduction
+title: Introdução
 ---
 
-## What is MAMBA?
+## O que é o MAMBA?
 
-Mamba is a system and framework developed within Stone specifically for POS (Point of Sale)!
-With it you can use web programming to develop applications using web technologies, according to the client's needs.
+Mamba é um sistema e framework desenvolvido dentro da Stone especificamente para o POS (Ponto de Venda)!
+Com ele você pode utilizar a programação web para desenvolver aplicativos utilizando tecnologias web, de acordo com as necessidades do cliente.
 
-> You will need to have [Node.js](https://nodejs.org/en/) installed, and have some familiarity with the command line
+> Você precisará ter o [Node.js](https://nodejs.org/en/) instalado e ter alguma familiaridade com a linha de comando
 
-> Before try or start using Mamba Web, a good knowledge base of [JavaScript ES2015](http://babeljs.io/docs/learn-es2015/) is needed.
+> Antes de tentar ou começar a usar o Mamba Web, é necessária uma boa base de conhecimento do [JavaScript ES2015](http://babeljs.io/docs/learn-es2015/).
 
-## Getting started
 
-### 1. Create a New Project
+## Começando
+
+### 1. Crie um novo projeto
 
 ```bash
 git clone https://github.com/stone-payments/pos-mamba-websdk-template.git <my-app>
 cd <my-app>
 ```
-When that's done, install the project dependencies. It is recommended that you use ```Yarn``` for deterministic dependency management, but ```npm install``` will suffice.
+Quando isso for feito, instale as dependências do projeto. É recomendado que você use `Yarn` para gerenciamento de dependências determinísticas, mas `npm install` será suficiente.
 
 ```bash
-yarn  # Install project dependencies (or `npm install`)
+yarn  # Instala dependências do projeto (ou `npm install`)
 ```
 
-### 3. Run project
+### 2. Rode o projeto
 
-After completing the installation step, you're ready to start the project!
+Depois de concluir a etapa de instalação, você está pronto para iniciar o projeto!
 
 ```bash
-yarn start # Start the development environment
+yarn start # Inicie o ambiente de desenvolvimento
 ```
 
-### 4. Using some Mamba components
+### 3. Usando alguns componentes do Mamba
+
+**Para componentes Web, instale o componente/pacote que deseja usar no projeto:**
 
 ```bash
-yarn install @mamba/buttom
+yarn install @mamba/buttom # Componente do botão
+
+
+# Se quiser usar o dialog por ex:
+
+yarn install @mamba/dialog
 ```
 
-### Compatibility
 
-Mamba was developed to run with Safari 5.1+ which is the browser version in the POS
+
+**Para importar o componente instalado, pode seguir uma das formas abaixo:**
+
+```js
+<script>
+  import Button from '@mamba/buttom';
+
+  export default {
+    components: { Button }
+  }
+</script>
+
+// ou 
+
+<script>
+  export default {
+    components: {
+      Button: '@mamba/buttom'
+    }
+  }
+</script>
+```
+
+#### Para modules da API nativa:
+
+```bash
+yarn install @mamba/native
+```
+
+Agora só importar o módulo que deseja, sempre descontruindo objeto do pacote `@mamba/native`:
+
+```js
+import System from '@mamba/native/system.js'
+```
+
+### Compatibilidade
+
+O Mamba foi desenvolvido para rodar com o Safari 5.1+, que é a versão do navegador no POS.
