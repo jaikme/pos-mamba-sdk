@@ -59,12 +59,15 @@ abbr {
 article blockquote,
 article dl,
 article ol,
-article p,
 article table tbody,
 article ul {
   font-size: 15px;
   color: #373e42;
   line-height: 26px;
+}
+
+article p {
+  font-size: 16px;
 }
 
 a,

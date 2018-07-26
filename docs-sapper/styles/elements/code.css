@@ -9,6 +9,7 @@
 
 .code-block pre {
   line-height: 1;
+  background-color: #f7f9f8;
 }
 
 .code-block code {
@@ -73,6 +74,7 @@ pre[class*='language-'] {
   content: '>';
 }
 
-.line-numbers.language-bash .line-numbers-rows span:first-child::before {
+.line-numbers.language-bash .line-numbers-rows span:first-child::before,
+.line-numbers .line-numbers-rows span:only-child::before {
   content: '$';
 }

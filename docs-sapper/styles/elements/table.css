@@ -1,0 +1,16 @@
+.component.content table {
+  tr td:first-child {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  td {
+    border-bottom: 1px solid color-mod(black alpha(5%));
+  }
+
+  th {
+    opacity: 0.8;
+    font-weight: 600;
+    font-size: 15px;
+  }
+}

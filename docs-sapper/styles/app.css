@@ -21,4 +21,5 @@
 
 /* Elements */
 @import 'elements/button.css';
+@import 'elements/table.css';
 @import 'elements/code.css';
