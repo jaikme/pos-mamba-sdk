@@ -8,8 +8,9 @@ export default function signalFactory() {
   Signal.connect = callback => slots.push(callback);
   Signal.disconnect = (callback) => {
     const callbackIndex = slots.indexOf(callback);
-    if (callbackIndex < 0) return;
-    slots.splice(callbackIndex, 1);
+    if (callbackIndex >= 0) {
+      slots.splice(callbackIndex, 1);
+    }
   };
 
   return Signal;
